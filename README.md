@@ -34,11 +34,11 @@ Each model is used to predict the stock price 11 days ahead using 2 years of his
 
 The simplest of the three models. Stock price evolves according to:
 
-$$dS_t = \mu S_t \, dt + \sigma S_t \, dW_t$$
+$$dS_t = \mu S_t \ dt + \sigma S_t \ dW_t$$
 
 Discretised as:
 
-$$S_{t+1} = S_t \exp\!\left[\left(\mu - \frac{\sigma^2}{2}\right)\Delta t + \sigma\sqrt{\Delta t}\, Z\right]$$
+$$S_{t+1} = S_t \exp\!\left[\left(\mu - \frac{\sigma^2}{2}\right)\Delta t + \sigma\sqrt{\Delta t}\ Z\right]$$
 
 where $Z \sim N(0,1)$, evaluated using `NORM.S.INV()`.
 
@@ -48,11 +48,11 @@ where $Z \sim N(0,1)$, evaluated using `NORM.S.INV()`.
 
 A mean-reverting model well suited to commodity prices. Stock price evolves according to:
 
-$$dS_t = \theta(\bar{S} - S_t)\, dt + \sigma \, dW_t$$
+$$dS_t = \theta(\bar{S} - S_t)\ dt + \sigma \ dW_t$$
 
 Discretised (Euler–Maruyama) as:
 
-$$S_{t+1} = S_t + \theta(\bar{S} - S_t)\,\Delta t + \sigma\sqrt{\Delta t}\, Z$$
+$$S_{t+1} = S_t + \theta(\bar{S} - S_t)\\Delta t + \sigma\sqrt{\Delta t}\ Z$$
 
 where $\theta > 0$ controls the strength of mean reversion and $\bar{S}$ is the running average price.
 
@@ -62,11 +62,11 @@ where $\theta > 0$ controls the strength of mean reversion and $\bar{S}$ is the 
 
 A close cousin of OUMR where volatility scales with the square root of the current price, preventing the stock from going negative (given Feller's condition $2\theta\bar{S} > \sigma^2$ holds). Stock price evolves according to:
 
-$$dS_t = \theta(\bar{S} - S_t)\, dt + \sigma\sqrt{S_t}\, dW_t$$
+$$dS_t = \theta(\bar{S} - S_t)\, dt + \sigma\sqrt{S_t}\ dW_t$$
 
 Discretised as:
 
-$$S_{t+1} = S_t + \theta(\bar{S} - S_t)\,\Delta t + \sigma\sqrt{\Delta t}\, Z$$
+$$S_{t+1} = S_t + \theta(\bar{S} - S_t)\\Delta t + \sigma\sqrt{\Delta t}\ Z$$
 
 where $Z = \max(S_t, 0)$ to enforce non-negativity.
 
