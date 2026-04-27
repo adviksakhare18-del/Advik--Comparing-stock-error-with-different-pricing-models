@@ -1,7 +1,7 @@
 # Comparing Stock Error with Different Stock Pricing Models
 
 **Author:** Advik Sakhare  
-**Date:** 17/04/2026  
+**Date:** 17-27/04/2026  
 **Companion project:** [Testing Varying Shock Functions](https://github.com/adviksakhare18-del/Advik--Testing-shock-functions)
 
 ---
@@ -38,7 +38,7 @@ $$dS_t = \mu S_t \ dt + \sigma S_t \ dW_t$$
 
 Discretised as:
 
-$$S_{t+1} = S_t \exp\!\left[\left(\mu - \frac{\sigma^2}{2}\right)\Delta t + \sigma\sqrt{\Delta t}\ Z\right]$$
+$$S_{t+1} = S_t \exp\\left[\left(\mu - \frac{\sigma^2}{2}\right)\Delta t + \sigma\sqrt{\Delta t}\ Z\right]$$
 
 where $Z \sim N(0,1)$, evaluated using `NORM.S.INV()`.
 
