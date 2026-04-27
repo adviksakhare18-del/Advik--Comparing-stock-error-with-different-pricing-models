@@ -2,7 +2,7 @@
 
 **Author:** Advik Sakhare  
 **Date:** 17/04/2026  
-**Companion paper:** [Testing Varying Shock Functions](INSERT_LINK_HERE)
+**Companion project:** [Testing Varying Shock Functions](https://github.com/adviksakhare18-del/Advik--Testing-shock-functions)
 
 ---
 
